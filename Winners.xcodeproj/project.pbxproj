@@ -12,6 +12,13 @@
 		F21706EA210A171B00FDA614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21706E8210A171B00FDA614 /* Main.storyboard */; };
 		F21706EC210A171D00FDA614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21706EB210A171D00FDA614 /* Assets.xcassets */; };
 		F21706EF210A171D00FDA614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21706ED210A171D00FDA614 /* LaunchScreen.storyboard */; };
+		F21706FA210A1AF800FDA614 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F21706F9210A1AF800FDA614 /* GoogleService-Info.plist */; };
+		F21706FD210A210700FDA614 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21706FC210A210700FDA614 /* DesignableButton.swift */; };
+		F21706FF210A282200FDA614 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21706FE210A282200FDA614 /* LoginViewController.swift */; };
+		F2170701210A287E00FDA614 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170700210A287E00FDA614 /* WelcomeViewController.swift */; };
+		F2170703210A2AA100FDA614 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170702210A2AA100FDA614 /* GradientView.swift */; };
+		F2170705210A308F00FDA614 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2170704210A308F00FDA614 /* Billabong.ttf */; };
+		F217070A210A65CD00FDA614 /* ButtonBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170709210A65CD00FDA614 /* ButtonBounce.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		F21706EB210A171D00FDA614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21706EE210A171D00FDA614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F21706F0210A171D00FDA614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F21706F9210A1AF800FDA614 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F21706FC210A210700FDA614 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
+		F21706FE210A282200FDA614 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		F2170700210A287E00FDA614 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		F2170702210A2AA100FDA614 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F2170704210A308F00FDA614 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
+		F2170709210A65CD00FDA614 /* ButtonBounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBounce.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +69,60 @@
 			isa = PBXGroup;
 			children = (
 				F21706E4210A171B00FDA614 /* AppDelegate.swift */,
-				F21706E6210A171B00FDA614 /* ViewController.swift */,
-				F21706E8210A171B00FDA614 /* Main.storyboard */,
+				F21706F7210A197700FDA614 /* Model */,
+				F21706F6210A195F00FDA614 /* Controller */,
 				F21706EB210A171D00FDA614 /* Assets.xcassets */,
-				F21706ED210A171D00FDA614 /* LaunchScreen.storyboard */,
+				F21706F8210A197C00FDA614 /* View */,
+				F21706FB210A20CE00FDA614 /* IBDesignables */,
 				F21706F0210A171D00FDA614 /* Info.plist */,
+				F21706F9210A1AF800FDA614 /* GoogleService-Info.plist */,
 			);
 			path = Winners;
+			sourceTree = "<group>";
+		};
+		F21706F6210A195F00FDA614 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F2170700210A287E00FDA614 /* WelcomeViewController.swift */,
+				F21706E6210A171B00FDA614 /* ViewController.swift */,
+				F21706FE210A282200FDA614 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F21706F7210A197700FDA614 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F21706F8210A197C00FDA614 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F21706E8210A171B00FDA614 /* Main.storyboard */,
+				F21706ED210A171D00FDA614 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F21706FB210A20CE00FDA614 /* IBDesignables */ = {
+			isa = PBXGroup;
+			children = (
+				F21706FC210A210700FDA614 /* DesignableButton.swift */,
+				F2170702210A2AA100FDA614 /* GradientView.swift */,
+				F2170706210A309400FDA614 /* Font */,
+				F2170709210A65CD00FDA614 /* ButtonBounce.swift */,
+			);
+			path = IBDesignables;
+			sourceTree = "<group>";
+		};
+		F2170706210A309400FDA614 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				F2170704210A308F00FDA614 /* Billabong.ttf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21706EF210A171D00FDA614 /* LaunchScreen.storyboard in Resources */,
+				F21706FA210A1AF800FDA614 /* GoogleService-Info.plist in Resources */,
 				F21706EC210A171D00FDA614 /* Assets.xcassets in Resources */,
+				F2170705210A308F00FDA614 /* Billabong.ttf in Resources */,
 				F21706EA210A171B00FDA614 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +198,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F21706FF210A282200FDA614 /* LoginViewController.swift in Sources */,
+				F2170701210A287E00FDA614 /* WelcomeViewController.swift in Sources */,
+				F2170703210A2AA100FDA614 /* GradientView.swift in Sources */,
 				F21706E7210A171B00FDA614 /* ViewController.swift in Sources */,
 				F21706E5210A171B00FDA614 /* AppDelegate.swift in Sources */,
+				F217070A210A65CD00FDA614 /* ButtonBounce.swift in Sources */,
+				F21706FD210A210700FDA614 /* DesignableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +351,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFJ2RL5M47;
 				INFOPLIST_FILE = Winners/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -301,6 +370,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PFJ2RL5M47;
 				INFOPLIST_FILE = Winners/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

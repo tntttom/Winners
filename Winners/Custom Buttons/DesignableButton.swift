@@ -8,7 +8,7 @@
 
 import UIKit
 
-@IBDesignable class DesignableButton: ButtonBounce {
+@IBDesignable class DesignableButton: UIButton {
 
     @IBInspectable var cornerRadius: CGFloat = 0 {
         didSet{

@@ -12,18 +12,61 @@ import FirebaseDatabase
 import Firebase
 import FirebaseAuth
 
-class MainViewController: UIViewController {
-
+class MainViewController: UIViewController{
+    @IBOutlet weak var eventTableView: UITableView!
+    
+    @IBOutlet weak var gradientView: GradientView!
+    
+    var currentColorIndex = -1
+    var colorArray: [(color1: UIColor, color2: UIColor)] = []
+    var events = [Event]()
+    var eventName = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = false
         
+        
+        eventTableView.dataSource = self
+        
+        eventTableView.delegate = self
+        
+        eventTableView.layer.borderColor = UIColor.white.cgColor
+        eventTableView.layer.borderWidth = 1.0
+        
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        if eventTableView.indexPathForSelectedRow == nil {
+            loadEvents()
+        }
         updateUser()
-        
         setCustomBackImage()
         
     }
-
     
+    func loadEvents() {
+        
+        Database.database().reference().child("Events").observe(.childAdded) { (eventSnapshot) in
+           
+            self.eventName.append(eventSnapshot.key)
+            
+            let eventInfoDict = eventSnapshot.value as? [String: Any]
+            let address = eventInfoDict!["address"] as! String
+            let city = eventInfoDict!["city"] as! String
+            let date = eventInfoDict!["date"] as! String
+            let time = eventInfoDict!["time"] as! String
+            
+            let event = Event(addressText: address, cityText: city, dateText: date, timeText: time)
+            
+            self.events.append(event)
+            
+            self.eventTableView.reloadData()
+        }
+    }
+
     @IBAction func signoutPressed(_ sender: Any) {
         handleLogout()
     }
@@ -73,6 +116,12 @@ class MainViewController: UIViewController {
         
     }
     
+    @IBAction func addButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToAddEvent", sender: self)
+        
+    }
+    
+    
     func setCustomBackImage() {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
@@ -83,3 +132,53 @@ class MainViewController: UIViewController {
     
     
 }
+
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return events.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCell", for: indexPath)
+        cell.textLabel?.text = eventName[indexPath.row]
+        cell.textLabel?.font = UIFont(name: "Noteworthy", size: 18)
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.textAlignment = .center
+        cell.backgroundColor = UIColor.clear
+        eventTableView.backgroundColor = .clear
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: "goToEventDetail", sender: self)
+        
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.destination.isKind(of: AddEventViewController.self){
+            
+            return
+            
+        } else if segue.destination.isKind(of: WelcomeViewController.self){
+            
+                return
+            
+            } else{
+            
+            let destinationVC = segue.destination as! EventDetailViewController
+        
+            if let indexPath = eventTableView.indexPathForSelectedRow {
+                destinationVC.eventName = eventName[indexPath.row]
+                destinationVC.currentEventIndex = indexPath.row
+                destinationVC.events = events
+                }
+            }
+        }
+
+    }

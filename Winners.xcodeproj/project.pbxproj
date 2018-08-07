@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3CBCAA4E8A111EFFE952B8A2 /* Pods_Winners.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86953A97C0DB736CB484DFF0 /* Pods_Winners.framework */; };
 		F21706E5210A171B00FDA614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21706E4210A171B00FDA614 /* AppDelegate.swift */; };
-		F21706E7210A171B00FDA614 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21706E6210A171B00FDA614 /* ViewController.swift */; };
+		F21706E7210A171B00FDA614 /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F21706E6210A171B00FDA614 /* EventDetailViewController.swift */; };
 		F21706EA210A171B00FDA614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21706E8210A171B00FDA614 /* Main.storyboard */; };
 		F21706EC210A171D00FDA614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F21706EB210A171D00FDA614 /* Assets.xcassets */; };
 		F21706EF210A171D00FDA614 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F21706ED210A171D00FDA614 /* LaunchScreen.storyboard */; };
@@ -20,6 +20,8 @@
 		F2170703210A2AA100FDA614 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170702210A2AA100FDA614 /* GradientView.swift */; };
 		F2170705210A308F00FDA614 /* Billabong.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2170704210A308F00FDA614 /* Billabong.ttf */; };
 		F217070A210A65CD00FDA614 /* ButtonBounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2170709210A65CD00FDA614 /* ButtonBounce.swift */; };
+		F220ACF821120BD00074B6F8 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = F220ACF721120BD00074B6F8 /* Event.swift */; };
+		F234D1FB2118AF55006AE15E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = F234D1FA2118AF55006AE15E /* User.swift */; };
 		F2C265F0210BBA190026763C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C265EF210BBA190026763C /* RegisterViewController.swift */; };
 		F2C265F2210F61470026763C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C265F1210F61470026763C /* MainViewController.swift */; };
 		F2CFDF7F21109FE400418941 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2CFDF7E21109FE400418941 /* AddEventViewController.swift */; };
@@ -31,7 +33,7 @@
 		86953A97C0DB736CB484DFF0 /* Pods_Winners.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Winners.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21706E1210A171B00FDA614 /* Winners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Winners.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F21706E4210A171B00FDA614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F21706E6210A171B00FDA614 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F21706E6210A171B00FDA614 /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		F21706E9210A171B00FDA614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F21706EB210A171D00FDA614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F21706EE210A171D00FDA614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +45,8 @@
 		F2170702210A2AA100FDA614 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		F2170704210A308F00FDA614 /* Billabong.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Billabong.ttf; sourceTree = "<group>"; };
 		F2170709210A65CD00FDA614 /* ButtonBounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonBounce.swift; sourceTree = "<group>"; };
+		F220ACF721120BD00074B6F8 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		F234D1FA2118AF55006AE15E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		F2C265EF210BBA190026763C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F2C265F1210F61470026763C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F2CFDF7E21109FE400418941 /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -115,7 +119,7 @@
 			children = (
 				F2170700210A287E00FDA614 /* WelcomeViewController.swift */,
 				F2C265F1210F61470026763C /* MainViewController.swift */,
-				F21706E6210A171B00FDA614 /* ViewController.swift */,
+				F21706E6210A171B00FDA614 /* EventDetailViewController.swift */,
 				F21706FE210A282200FDA614 /* LoginViewController.swift */,
 				F2C265EF210BBA190026763C /* RegisterViewController.swift */,
 				F2CFDF7E21109FE400418941 /* AddEventViewController.swift */,
@@ -126,6 +130,8 @@
 		F21706F7210A197700FDA614 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F220ACF721120BD00074B6F8 /* Event.swift */,
+				F234D1FA2118AF55006AE15E /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,12 +287,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				F21706FF210A282200FDA614 /* LoginViewController.swift in Sources */,
+				F220ACF821120BD00074B6F8 /* Event.swift in Sources */,
 				F2CFDF7F21109FE400418941 /* AddEventViewController.swift in Sources */,
 				F2170701210A287E00FDA614 /* WelcomeViewController.swift in Sources */,
 				F2170703210A2AA100FDA614 /* GradientView.swift in Sources */,
 				F2C265F0210BBA190026763C /* RegisterViewController.swift in Sources */,
-				F21706E7210A171B00FDA614 /* ViewController.swift in Sources */,
+				F21706E7210A171B00FDA614 /* EventDetailViewController.swift in Sources */,
 				F21706E5210A171B00FDA614 /* AppDelegate.swift in Sources */,
+				F234D1FB2118AF55006AE15E /* User.swift in Sources */,
 				F2C265F2210F61470026763C /* MainViewController.swift in Sources */,
 				F217070A210A65CD00FDA614 /* ButtonBounce.swift in Sources */,
 				F21706FD210A210700FDA614 /* DesignableButton.swift in Sources */,
